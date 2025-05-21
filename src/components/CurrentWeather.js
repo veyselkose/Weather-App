@@ -1,4 +1,3 @@
-import React from "react";
 import { Icon } from "@iconify/react";
 import { useMainContext } from "../context/MainContext";
 
@@ -8,7 +7,7 @@ function CurrentWeather() {
     <div
       className={`relative bg-white dark:bg-black dark:text-white p-6 flex flex-col items-center justify-center text-center rounded-24 ${
         !loading && "loading"
-      } ${!loading && (lang ? "after:content-['Yükleniyor']" :"after:content-['loading']") }`}
+      } ${!loading && (lang ? "after:content-['Yükleniyor']" : "after:content-['loading']")}`}
     >
       <h4 className="text-2xl">
         {weatherData.currCityName},
@@ -38,11 +37,7 @@ function CurrentWeather() {
       )}
 
       <h1 className="text-5xl font-light mt-4">{weatherData.currDescription}</h1>
-      <img
-        src={require(`../icons/${weatherData.currIconId}.svg`)}
-        className="h-48 w-48 mt-6"
-        alt=""
-      />
+      <img src={weatherData.currIconId} className="h-48 w-48 mt-6" alt="" />
       <h1 className="day-color text-5xl font-light flex mt-4">
         {weatherData.currTemp}°{" "}
         <span className="text-2xl text-black dark:text-white">{tempType ? "F" : "C"}</span>

@@ -7,7 +7,6 @@ function SavedList({ savedModal, setSavedModal }) {
   const { lang, savedList, savedWeatherContent } = useMainContext();
   const [scrollIndex, setscrollIndex] = useState(0);
   const [scrollValue, setscrollValue] = useState(0);
-
   useSavedWeatherContent();
   return (
     <div
@@ -46,9 +45,9 @@ function SavedList({ savedModal, setSavedModal }) {
               <SavedWeather
                 scroll={scrollValue}
                 city={item[0]}
-                icon={item[2]}
-                key={item[3]}
                 temp={item[1]}
+                icon={item[2]}
+                key={item[0]}
               />
             ))
         ) : (

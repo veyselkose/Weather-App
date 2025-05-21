@@ -15,7 +15,7 @@ function Highlight() {
         </h3>
         <div className="flex items-center">
           <img
-            src={require(`../icons/thermometer-warmer.svg`).default}
+            src="images/icons/thermometer-warmer.svg"
             alt=""
             className="-ml-8 h-24 w-24"
           />
@@ -25,7 +25,7 @@ function Highlight() {
         </div>
         <div className="flex items-center">
           <img
-            src={require(`../icons/thermometer-colder.svg`).default}
+            src="images/icons/thermometer-colder.svg"
             alt=""
             className="-ml-8 h-24 w-24"
           />
@@ -43,19 +43,19 @@ function Highlight() {
             {weatherData.currHumidity}
             <span className="text-lg text-gray-500 dark:text-white">%</span>
           </span>
-          <img src={require(`../icons/humidity.svg`).default} alt="" className="h-24 w-24" />
+          <img src="images/icons/humidity.svg" alt="" className="h-24 w-24" />
         </div>
         <div className="flex items-center mt-7">
           <span className="text-2xl text-gray-600 dark:text-slate-200">
             {lang
-              ? weatherData.humidity < 30
+              ? weatherData.currHumidity < 30
                 ? "Düşük 👎🏻"
-                : weatherData.humidity >= 30 && weatherData.humidity < 60
+                : weatherData.currHumidity >= 30 && weatherData.currHumidity < 60
                 ? "Normal 👌🏻"
                 : "Yüksek 👍🏻"
-              : weatherData.humidity < 30
+              : weatherData.currHumidity < 30
               ? "Low 👎🏻"
-              : weatherData.humidity >= 30 && weatherData.humidity < 60
+              : weatherData.currHumidity >= 30 && weatherData.currHumidity < 60
               ? "Normal 👌🏻"
               : "High 👍🏻"}
           </span>
@@ -66,13 +66,13 @@ function Highlight() {
           {lang ? "Doğumu & Batımı" : "Sunrise & Sunset"}
         </h3>
         <div className="flex items-center">
-          <img src={require(`../icons/sunrise.svg`).default} alt="" className="h-24 w-24" />
+          <img src="images/icons/sunrise.svg" alt="" className="h-24 w-24" />
           <span className="text-lg ml-2 text-gray-600 dark:text-slate-200">
             {weatherData.currSunrise}
           </span>
         </div>
         <div className="flex items-center">
-          <img src={require(`../icons/sunset.svg`).default} alt="" className="h-24 w-24" />
+          <img src="images/icons/sunset.svg" alt="" className="h-24 w-24" />
           <span className="text-lg ml-2 text-gray-600 dark:text-slate-200">
             {weatherData.currSunset}
           </span>
@@ -87,11 +87,11 @@ function Highlight() {
             {weatherData.currWindSpeed}
             <span className="text-lg text-gray-500 dark:text-white">Km/h</span>
           </span>
-          <img src={require(`../icons/windsock.svg`).default} alt="" className="h-14 w-14" />
+          <img src="images/icons/windsock.svg" alt="" className="h-14 w-14" />
         </div>
         <div className="flex items-center mt-4">
           <img
-            src={require(`../icons/compass.svg`).default}
+            src="images/icons/compass.svg"
             alt=""
             className="h-24 w-24 -ml-5"
             style={{ transform: `rotate(${weatherData.currWindDeg}deg)` }}

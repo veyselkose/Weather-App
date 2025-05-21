@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useMainContext } from "../context/MainContext";
-import convertDate from "../hooks/useWeather";
 import WeatherCard from "./WeatherCard";
 
 function DayOrHour() {
   const [DayOrHour, setDayOrHour] = useState(false);
-  const { weatherData, lang,loading } = useMainContext();
+  const { weatherData, lang, loading } = useMainContext();
   return (
-    <div className={`bg-white dark:bg-black xl:h-full rounded-24 p-6 relative ${!loading && "loading" } ${!loading && (lang ? "after:content-['Yükleniyor']" :"after:content-['loading']") }`}>
+    <div
+      className={`bg-white dark:bg-black xl:h-full rounded-24 p-6 relative ${
+        !loading && "loading"
+      } ${!loading && (lang ? "after:content-['Yükleniyor']" : "after:content-['loading']")}`}
+    >
       <label className="switch mb-4 " htmlFor="DayOrHour">
         <input
           type="checkbox"
@@ -24,19 +27,22 @@ function DayOrHour() {
         {DayOrHour
           ? weatherData?.listDaily?.map((item, index) => (
               <WeatherCard
-                temp={Math.round(item.temp.day)}
-                day={convertDate(item.dt, lang ? "tr" : "en", "short").weakDay}
-                time={convertDate(item.dt, lang ? "tr" : "en").hours}
-                icon={item.weather[0].icon}
+                temp={Math.round(item.max)}
+                isDay={true}
+                day={item.date.weakDay}
+                time={item.date.hours}
+                icon={item.icon}
+                color={item.color}
                 key={index}
               />
             ))
           : weatherData?.listHours?.map((item, index) => (
               <WeatherCard
                 temp={Math.round(item.temp)}
-                day={convertDate(item.dt, lang ? "tr" : "en", "short").weakDay}
-                time={convertDate(item.dt, lang ? "tr" : "en").hours}
-                icon={item.weather[0].icon}
+                day={item.date.weakDay}
+                time={item.date.hours}
+                icon={item.icon}
+                color={item.color}
                 key={index}
               />
             ))}

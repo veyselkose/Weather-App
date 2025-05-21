@@ -26,7 +26,7 @@ function Settings({ settingsModal, setSettingsModal }) {
         setChecked={setTheme}
         name="theme"
         icon
-        values={["01n", "01d"]}
+        values={["night", "day"]}
       />
       <SettingsBtn checked={lang} setChecked={setLang} name="lang" values={["EN", "TR"]} />
       <SettingsBtn checked={tempType} setChecked={setTempType} name="temp" values={["°C", "°F"]} />

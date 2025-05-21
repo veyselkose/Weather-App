@@ -29,7 +29,7 @@
   margin-top: -35px;
   width: 40px;
   height: 40px;
-  background-image: url(icons/loading.svg);
+  background-image: url(../public/images/icons/loading.svg);
   background-repeat: none;
   background-position: center;
   background-size: cover;
@@ -65,53 +65,133 @@
 .day-color {
   color: var(--day-color);
 }
-.bg-01d {
+
+.bg-wmo-0-day {
+  /* iconBase: "clear" */
   background: rgba(252, 191, 36, 0.7);
 }
-.bg-01n {
+.bg-wmo-0-night {
+  /* iconBase: "clear" */
   background: rgba(129, 193, 218, 0.7);
 }
-.bg-02d {
+
+.bg-wmo-1-day,
+.bg-wmo-2-day {
+  /* iconBase: "partly-cloudy" */
   background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(252, 191, 37, 0.7) 100%);
 }
-.bg-02n {
+.bg-wmo-1-night,
+.bg-wmo-2-night {
+  /* iconBase: "partly-cloudy" */
   background: linear-gradient(180deg, rgba(240, 246, 254, 0.7) 0%, rgba(134, 195, 220, 0.7) 100%);
 }
-.bg-03d {
+
+.bg-wmo-3-day,
+.bg-wmo-3-night {
+  /* iconBase: "overcast" */
   background: rgba(230, 239, 252, 0.7);
 }
-.bg-03n {
-  background: rgba(230, 239, 252, 0.7);
-}
-.bg-04d {
+
+.bg-wmo-45-day,
+.bg-wmo-45-night,
+.bg-wmo-48-day,
+.bg-wmo-48-night {
+  /* iconBase: "fog" */
   background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(147, 154, 166, 0.7) 100%);
 }
-.bg-04n {
-  background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(147, 154, 166, 0.7) 100%);
+
+.bg-wmo-51-day,
+.bg-wmo-51-night,
+.bg-wmo-53-day,
+.bg-wmo-53-night {
+  /* iconBase: "drizzle" */
+  background: linear-gradient(180deg, #eaf4fb 0%, #5d87a1 100%);
 }
-.bg-09d {
-  background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(67, 134, 239, 0.7) 100%);
+.bg-wmo-55-day,
+.bg-wmo-55-night {
+  /* iconBase: "extreme-drizzle" */
+  background: linear-gradient(180deg, #dceaf3 0%, #44697f 100%);
 }
-.bg-09n {
-  background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(67, 134, 239, 0.7) 100%);
+
+.bg-wmo-56-day,
+.bg-wmo-56-night,
+.bg-wmo-66-day,
+.bg-wmo-66-night,
+.bg-wmo-67-day,
+.bg-wmo-67-night {
+  /* iconBase: "sleet" */
+  background: linear-gradient(180deg, #e7f2f9 0%, #5c7e94 100%);
 }
-.bg-10d {
-  background: linear-gradient(180deg, #f4f8ff 0%, #fcbf24 49.27%, #4386ef 100%);
+.bg-wmo-57-day,
+.bg-wmo-57-night {
+  /* iconBase: "extreme-sleet" */
+  background: linear-gradient(180deg, #dce9f1 0%, #3e5f71 100%);
 }
-.bg-10n {
-  background: linear-gradient(180deg, #f4f8ff 0%, #86c3dc 49.27%, #4386ef 100%);
+.bg-wmo-77-day,
+.bg-wmo-77-night {
+  /* iconBase: "snowflake" */
+  background: linear-gradient(180deg, #f3fbff 0%, #6fa3c1 100%);
 }
-.bg-11d {
-  background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(245, 158, 11, 0.7) 100%);
+
+.bg-wmo-61-day,
+.bg-wmo-61-night,
+.bg-wmo-63-day,
+.bg-wmo-63-night,
+.bg-wmo-80-day,
+.bg-wmo-80-night,
+.bg-wmo-81-day,
+.bg-wmo-81-night {
+  /* iconBase: "rain" */
+  background: linear-gradient(180deg, #dbeaf6 0%, #3f6b85 100%);
 }
-.bg-11n {
-  background: linear-gradient(180deg, rgba(244, 248, 255, 0.7) 0%, rgba(245, 158, 11, 0.7) 100%);
+
+.bg-wmo-65-day,
+.bg-wmo-65-night,
+.bg-wmo-82-day,
+.bg-wmo-82-night {
+  /* iconBase: "extreme-rain" */
+  background: linear-gradient(180deg, #d0dbe5 0%, rgba(102, 122, 140, 0.7) 48%, #4a5c6e 100%);
 }
-.bg-13d {
-  background: linear-gradient(180deg, #f4f8ff 0%, rgba(252, 191, 36, 0.7) 42.5%, #72b9d5 100%);
+
+.bg-wmo-71-day,
+.bg-wmo-71-night,
+.bg-wmo-73-day,
+.bg-wmo-73-night,
+.bg-wmo-85-day,
+.bg-wmo-85-night {
+  /* iconBase: "snow" */
+  background: linear-gradient(180deg, #eef5fa 0%, #c0d3df 50%, #9aafbe 100%);
 }
-.bg-13n {
-  background: linear-gradient(180deg, #f4f8ff 0%, rgba(134, 195, 220, 0.7) 46.15%, #86c3dc 100%);
+.bg-wmo-75-day,
+.bg-wmo-75-night,
+.bg-wmo-86-day,
+.bg-wmo-86-night {
+  /* iconBase: "extreme-snow" */
+  background: linear-gradient(180deg, #f9fcff 0%, rgba(194, 213, 226, 0.7) 45%, #a0b7c6 100%);
+}
+
+.bg-wmo-95-day {
+  /* iconBase: "thunderstorms" */
+  background: linear-gradient(180deg, #fffbe6 0%, #d6e4f0 40%, #7a8ca0 100%);
+}
+.bg-wmo-95-night {
+  /* iconBase: "thunderstorms" */
+  background: linear-gradient(180deg, #2a2f4a 0%, #4b5568 50%, #7a8ca0 100%);
+}
+.bg-wmo-96-day,
+.bg-wmo-96-night {
+  /* iconBase: "hail" */
+  background: linear-gradient(180deg, #f1f5f9 0%, rgba(120, 144, 156, 0.7) 50%, #546e7a 100%);
+}
+
+.bg-wmo-99-day,
+.bg-wmo-99-night {
+  /* iconBase: "thunderstorms-rain" */
+  background: linear-gradient(180deg, #dbe9f4 0%, rgba(110, 138, 162, 0.65) 50%, #5b6e7d 100%);
+}
+
+.bg-wmo-unknown {
+  background: rgba(200, 200, 200, 0.7);
 }
 
 .switch {

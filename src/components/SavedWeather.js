@@ -13,7 +13,7 @@ function SavedWeather({ city, icon, scroll, temp }) {
     >
       <span>{city}</span>
       <img
-        src={require(`../icons/${icon}.svg`)}
+        src={icon}
         className="ml-5 h-6 w-6"
         alt="saved weather icon"
       />
